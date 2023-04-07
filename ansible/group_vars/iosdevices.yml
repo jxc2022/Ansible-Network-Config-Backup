@@ -1,4 +1,4 @@
 ---
 ansible_network_os: "ios"
-ansible_user: "user"
-ansible_password: "password"
+ansible_user: "cisco"
+ansible_password: "cisco"
