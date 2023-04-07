@@ -2,6 +2,8 @@
 - name: "PLAY 2: Get the Data From IOS Device"
   hosts: all
   connection: network_cli
+  collections:
+    - cisco.ios
   tasks:
     - name: "TASK 1: Get the device config"
       ios_command:
@@ -25,10 +27,14 @@
         content: "{{ cli_result_config.stdout}}\n" #Get content from output from Task 1
         dest: "flash/ansible/{{inventory_hostname}}.cfg"
     
-    - name: "Configure the login banner"
+    - name: Configure the login banner
       cisco.ios.ios_banner:
-        banner: login
-        text: "this is Jorge's login banner"
+      banner: login
+      text: |
+        this is my login banner
+        that contains a multiline
+        string
+      state: present
         
     
     - name: Gathering hardware info
