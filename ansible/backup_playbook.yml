@@ -17,4 +17,4 @@
     - name: "TASK 3 : Write config to file"
       copy:
         content: "{{ cli_result_config.stdout[0] }}\n" #Get content from output from Task 1
-        dest: "outputs/JUNOS/{{inventory_hostname}}.cfg"
+        dest: "outputs/IOS/{{inventory_hostname}}.cfg"
