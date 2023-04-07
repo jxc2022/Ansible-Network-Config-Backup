@@ -28,8 +28,8 @@
     - name: Configure the login banner
       cisco.ios.ios_banner:
         banner: login
-        text: this is Jorge's login banner
-        state: present
+        text: "this is Jorge's login banner"
+        
     
     - name: Gathering hardware info
       cisco.ios.ios_facts:
