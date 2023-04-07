@@ -7,6 +7,8 @@
       ios_command:
         commands: "show running-config"
       register: cli_result_config
+    
+    - debug: msg="{{cli_result_config}}"
 
     - name: "TASK 2 : Create outputs/ folder"
       file:
