@@ -8,7 +8,7 @@
         commands: "show running-config"
       register: cli_result_config
     
-    - debug: msg="{{cli_result_config}}"
+    - debug: msg="{{cli_result_config.stdout}}"
 
     - name: "TASK 2 : Create outputs/ folder"
       file:
