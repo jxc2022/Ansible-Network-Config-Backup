@@ -31,9 +31,9 @@
       cisco.ios.ios_banner:
       banner: login
       text: |
-        "this is my login banner
+        this is my login banner
         that contains a multiline
-        string"
+        string
       #state: present
         
     
