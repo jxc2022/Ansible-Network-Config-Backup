@@ -22,5 +22,5 @@
 
     - name: "TASK 3 : Write config to file"
       copy:
-        content: "{{ cli_result_config.stdout[0] }}\n" #Get content from output from Task 1
+        content: "{{ cli_result_config.stdout}}\n" #Get content from output from Task 1
         dest: "flash/ansible/{{inventory_hostname}}.cfg"
