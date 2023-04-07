@@ -16,7 +16,7 @@
       register: outfolder
     
     - debug:
-        msg: outfolder.stdout
+        msg: "{{outfolder.stdout}}"
 
     - name: "TASK 3 : Write config to file"
       copy:
