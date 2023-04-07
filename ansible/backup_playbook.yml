@@ -15,7 +15,7 @@
       run_once: true
       register: outfolder
     
-    - debug: msg="{{outfolder.stdout}}"
+    - debug: msg="{{inventory_hostname}}"
   
 
     - name: "TASK 3 : Write config to file"
