@@ -24,3 +24,13 @@
       copy:
         content: "{{ cli_result_config.stdout}}\n" #Get content from output from Task 1
         dest: "flash/ansible/{{inventory_hostname}}.cfg"
+    
+    - name: Configure the login banner
+      cisco.ios.ios_banner:
+        banner: login
+        text: this is Jorge's login banner
+        state: present
+    
+    - name: Gathering hardware info
+      cisco.ios.ios_facts:
+        gather_subset: hardware
