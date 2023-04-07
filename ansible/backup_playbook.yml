@@ -13,6 +13,10 @@
         path: "outputs/IOS"  #Path of the create folder
         state: directory
       run_once: true
+      register: outfolder
+    
+    - debug:
+        var: outfolder.stdout
 
     - name: "TASK 3 : Write config to file"
       copy:
