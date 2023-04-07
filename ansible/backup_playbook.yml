@@ -1,6 +1,6 @@
 ---
 - name: "PLAY 2: Get the Data From IOS Device"
-  hosts: all
+  hosts: cisco
   connection: network_cli
   tasks:
     - name: "TASK 1: Get the device config"
